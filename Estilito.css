@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Assets/typos/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
+
+.site-header {
+  background-color: #e03b3b; /* gris oscuro */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between; /* separa logo y menú */
+  align-items: center;
+  margin-bottom: 100px;
+
+  padding: 15px 30px;
+}
+
+.nav-list {
+  list-style: none;
+
+  display: flex; /* 🔥 esto lo pone horizontal */
+  font-size: 20px;
+  gap: 20px; /* espacio entre elementos */
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+.nav-list a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-list a:hover {
+  color: #00bcd4;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 4em;
+  color: #000000;
+}
+
+.center-bola {
+  display: block;
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.middle {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button {
+  width: 500px;
+  height: 55px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.btn2 {
+  background-color: #e03b3b;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+}
+
+.center-bola {
+  animation: wiggle 0.25s infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-2px, 1px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+  75% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.color {
+  text-align: center;
+}
+.color ul {
+  list-style-position: inside;
+  padding: 0;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: #e03b3b;
+}
+
+.imagen-dinamica {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
