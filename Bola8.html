@@ -16,8 +16,10 @@
 
     <nav class="main-nav">
         <ul class="nav-list">
-            <li><a href="#Bola8">Inicio-Bola8</a></li>
-            <li><a href="#Mascota">Mascota</a></li>
+            <li><a href="#Bola8">Inicio-Bola8</a>
+            <li><a href="#Mascota">Mascota</a>
+            <li><button class="galery-btn-1" id="gallery-btn">Gallery</button></li>
+            <li><button class="contac-btn-1 " id="contac-btn">Contac</button></li>
 
         </ul>
     </nav>
@@ -30,7 +32,7 @@
 
     <br>
 
-    <button class="middle">PREGUNTA TU SUERTE</button>
+    <button id="btn-suerte" class="middle btn-large">PREGUNTA TU SUERTE</button>
 
     <br>
 
@@ -38,23 +40,66 @@
 
 
 
-    <section class="color">
+    <section id="mascota-section" class="color">
         <h3 id="Titulito2">Mi mascota soñada</h3>
         <p>Mi mascota soñada sería.</p>
         <ul>
             <li>Un roedor</li>
             <li class="lista">Que camine en dos patas</li>
             <li class="lista">Que pueda defenderme</li>
+
         </ul>
 
-        <div>
+        <div id="contenedor-imagen"> <!-- Aqui aparece la imagen con js-->
 
-        </div>
+        </div> <!-- Aqui aparece la imagen con js-->
 
-        <button class="btn2">Click</button>
+        <button class="btn2 btn-large">Click</button> <!-- Boton aparece imagen-->
 
 
     </section>
+
+    <section id="galeria-y-contacto" class="sc-gal-contc"> <!-- Inicia practica de galeria y contacto-->
+
+        <div class="modulitoUno" id="modulito1"> <!-- Div Modulo 1-->
+
+            <div class="galeria-div1">
+                <div class="mdlito-items" id="modulito1-items">
+                    <p>Mi galeria</p>
+                    <img src="Assets/galerita.jpg" class="Galeriafotos">
+                    <br>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="modulito" id="modulito2"> <!-- Div Modulo 2 -->
+            <div class="contac-div1" id="contac-divuno">
+                <div class="contactosstyle">
+                    <p>
+                        Lorem ipsum
+                    </p>
+                    <img src="Assets/FBlogo.jpg" class="Logochico">
+                    <img src="Assets/IGlogo.jpg" class="Logochico">
+                    <img src="Assets/TKlogo.jpg" class="Logochico">
+
+                    <p>
+                        Mis redes
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section> <!-- Termina practica de galeria y contacto-->
+
+
     <script type="text/javascript" src="adivina.js"></script>
 </body>
 

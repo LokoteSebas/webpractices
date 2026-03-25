@@ -1,45 +1,61 @@
+/* =========================
+   1. RESET GENERAL
+   Reinicia márgenes y paddings
+   y hace más predecible el tamaño
+   de los elementos
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   2. FUENTE PERSONALIZADA
+   Carga la tipografía Roboto
+========================= */
 @font-face {
   font-family: 'Roboto';
   src: url('Assets/typos/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 100 900;
 }
 
+/* =========================
+   3. ESTILOS BASE
+   Se define la fuente general
+   para evitar repetirla tanto
+========================= */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* =========================
+   4. HEADER / NAVEGACIÓN
+========================= */
 .site-header {
-  background-color: #e03b3b; /* gris oscuro */
+  background-color: #e03b3b;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
 
   display: flex;
-  justify-content: space-between; /* separa logo y menú */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
 
   padding: 15px 30px;
+  margin-bottom: 100px;
 }
 
 .nav-list {
   list-style: none;
-
-  display: flex; /* 🔥 esto lo pone horizontal */
+  display: flex;
+  gap: 20px;
   font-size: 20px;
-  gap: 20px; /* espacio entre elementos */
 }
 
-h4 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-}
 .nav-list a {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: 500;
 }
@@ -48,40 +64,85 @@ h4 {
   color: #00bcd4;
 }
 
+/* =========================
+   5. BOTONES DEL NAV
+   Botones pequeños del menú
+========================= */
+.galery-btn-1 {
+  background-color: #ff9800;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+.contac-btn-1 {
+  background-color: #4caf50;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+/* =========================
+   6. TIPOGRAFÍA GENERAL
+========================= */
 h1 {
-  font-family: 'Roboto', sans-serif;
   text-align: center;
   font-size: 4em;
   color: #000000;
 }
 
-.center-bola {
-  display: block;
-  width: 400px;
-  height: 400px;
-  margin: 10px auto;
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #000000;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+h3 {
+  text-align: center;
+  font-size: 2em;
+  color: #e03b3b;
 }
 
+h4 {
+  font-size: 30px;
+}
+
+/* =========================
+7. UTILIDADES DE CENTRADO
+========================= */
+.center,
 .middle {
   display: block;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
+.color {
+  text-align: center;
+  margin-top: 80px;
+  /* controla separación aquí */
+}
+
+#first {
+  margin-bottom: 10px;
+}
+
+#Titulo2 {
+  margin-top: 40px;
+}
+
+/* =========================
+   8. BOTONES GENERALES
+   Este selector ya no define tamaños,
+   solo estilos base compartidos
+========================= */
 button {
-  width: 500px;
-  height: 55px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 1em;
 }
 
+/* Botón principal */
 .btn2 {
   background-color: #e03b3b;
   color: white;
@@ -90,58 +151,157 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin-bottom: 50px;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-h2 {
-  text-align: center;
-  font-size: 2em;
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
+/* Clase para botones grandes */
+.btn-large {
+  width: 500px;
+  height: 55px;
 }
 
+/* =========================
+   9. IMAGEN PRINCIPAL
+========================= */
 .center-bola {
+  display: block;
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
   animation: wiggle 0.25s infinite;
 }
 
+
+/* =========================
+    Modulos
+========================= */
+
+.modulitoUno {
+  display: none;
+
+  top: 10vh;
+}
+
+.modulitoUno.visible {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+
+  top: 10vh;
+}
+
+
+
+.galeria-div1 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+
+}
+
+.Galeriafotos {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.75);
+  margin: 40px;
+}
+
+.mdlito-items {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 800;
+  fon color: #000000;
+}
+
+.contac-div1 {
+  /* Contactos modulo*/
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+
+  justify-items: center;
+  top: 10vh;
+  margin: 40px;
+}
+
+.contac-div1.visible {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+  top: 10vh;
+}
+
+
+.contactosstyle {
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+
+  font-size: 2em;
+  font-weight: 800;
+  color: #000000;
+
+}
+
+.Logochico {
+  width: 55px;
+  padding: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   10. ANIMACIÓN
+========================= */
 @keyframes wiggle {
   0% {
     transform: translate(0px, 0px) rotate(0deg);
   }
+
   25% {
     transform: translate(-2px, 1px) rotate(-1deg);
   }
+
   50% {
     transform: translate(2px, -1px) rotate(1deg);
   }
+
   75% {
     transform: translate(-1px, 2px) rotate(-1deg);
   }
+
   100% {
     transform: translate(0px, 0px) rotate(0deg);
   }
 }
 
+/* =========================
+   11. LISTA DE COLORES
+========================= */
 .color {
   text-align: center;
 }
+
 .color ul {
   list-style-position: inside;
   padding: 0;
 }
 
-h3 {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2em;
-  color: #e03b3b;
-}
-
+/* =========================
+   12. IMAGEN DINÁMICA
+========================= */
 .imagen-dinamica {
+  display: block;
   width: 300px;
   height: auto;
-  display: block;
   margin: 20px auto;
   border-radius: 10px;
 }

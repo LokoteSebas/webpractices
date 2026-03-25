@@ -12,7 +12,7 @@ let Milistitadepalabras = [
   'Pregunta más tarde',
 ];
 
-let button = document.getElementsByTagName('button')[0];
+let button = document.getElementById('btn-suerte');
 
 button.addEventListener('click', function () {
   let randomIndex = Math.floor(Math.random() * Milistitadepalabras.length);
@@ -20,18 +20,18 @@ button.addEventListener('click', function () {
   document.getElementById('first').innerHTML = Milistitadepalabras[randomIndex];
 });
 
-const section = document.querySelector('section');
+const sectionDeMascota = document.getElementById('mascota-section');
 const buttonSecundario = document.querySelector('.btn2');
-const div = document.querySelector('div');
+const lugarDeTlacuache = document.getElementById('contenedor-imagen');
 
 buttonSecundario.addEventListener('click', () => {
-  // section.innerHTML = "<img src='burguer.jpg'>"
+  lugarDeTlacuache.innerHTML = ''; // 🔥 limpia lo anterior
 
   const imagen = document.createElement('img');
   imagen.src = 'Assets/BoxTla.jpg';
   imagen.classList.add('imagen-dinamica');
 
-  div.appendChild(imagen);
+  lugarDeTlacuache.appendChild(imagen);
 
   imagen.addEventListener('load', () => {
     window.scrollTo({
@@ -40,3 +40,34 @@ buttonSecundario.addEventListener('click', () => {
     });
   });
 });
+
+// Activacion de modulos
+const activaciondemodulo = document.getElementById('modulito1');
+const Galeria = document.getElementById('gallery-btn');
+const activaciondemodulo2 = document.getElementById('contac-divuno');
+const Contactos = document.getElementById('contac-btn');
+
+const togglegallery = () => {
+  activaciondemodulo.style.display = 'grid';
+  activaciondemodulo.style.gridTemplateColumns =
+    'repeat(auto-fill, minmax(400px, 1fr))';
+  activaciondemodulo2.style.display = 'none';
+
+  activaciondemodulo.scrollIntoView({
+    behavior: 'smooth',
+  });
+};
+
+Galeria.addEventListener('click', togglegallery);
+
+const togglecontacs = () => {
+  activaciondemodulo2.style.display = 'grid';
+  activaciondemodulo2.style.gridTemplateColumns =
+    'repeat(auto-fill, minmax(400px, 1fr))';
+  activaciondemodulo.style.display = 'none';
+  activaciondemodulo.scrollIntoView({
+    behavior: 'smooth',
+  });
+};
+
+Contactos.addEventListener('click', togglecontacs);
