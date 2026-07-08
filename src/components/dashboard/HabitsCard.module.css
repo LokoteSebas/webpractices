@@ -1,0 +1,102 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  padding: 12px 14px;
+}
+
+.title {
+  color: var(--text-full-black);
+  font: 700 28px/1.1 var(--heading);
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  max-width: 360px;
+  color: var(--text-full-black);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0px;
+}
+
+.neonCard {
+  width: 100%;
+  margin: 0;
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #bff7d2 0%, #7bd7dd 48%, #b7b9ff 100%);
+}
+
+.counter {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: #133c35;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message {
+  color: #2d3748;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: #1d2530;
+  background: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+}
+
+.statusDone,
+.statusPending {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+}
+
+.statusDone {
+  background: #27b36a;
+}
+
+.statusPending {
+  background: #c8ced8;
+}
+
+.action {
+  align-self: flex-start;
+  margin-top: auto;
+  border: 0;
+  border-radius: 16px;
+  padding: 12px 18px;
+  color: #000000;
+  background: linear-gradient(135deg, #bff7d2 0%, #7bd7dd 48%, #b7b9ff 100%);
+
+  font-weight: 700;
+}

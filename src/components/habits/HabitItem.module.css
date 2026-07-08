@@ -1,0 +1,90 @@
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  border: 1px solid rgba(29, 37, 48, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: #1d2530;
+  background: #ffffff;
+  font: 600 15px/1.2 var(--sans);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.item:hover {
+  border-color: rgba(39, 179, 106, 0.35);
+  transform: translateY(-1px);
+}
+
+.itemDone {
+  color: #12352b;
+  background: #eefaf4;
+  border-color: rgba(39, 179, 106, 0.45);
+}
+
+.marker {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 2px solid #c8ced8;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.itemDone .marker {
+  border-color: #27b36a;
+  background: #27b36a;
+}
+
+.name {
+  min-width: 0;
+}
+
+.content {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  gap: 2px;
+}
+
+.progress {
+  color: #5a6573;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.controlButton {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(29, 37, 48, 0.12);
+  border-radius: 999px;
+  color: #12352b;
+  background: #ffffff;
+  font: 800 18px/1 var(--sans);
+  cursor: pointer;
+}
+
+.controlButton:hover {
+  border-color: rgba(39, 179, 106, 0.45);
+  background: #f7fffb;
+}

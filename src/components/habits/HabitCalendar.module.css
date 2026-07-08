@@ -1,0 +1,85 @@
+.panel {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(29, 37, 48, 0.08);
+  border-radius: 8px;
+  color: #18212d;
+  background: #ffffff;
+}
+
+.header {
+  display: grid;
+  gap: 4px;
+}
+
+.title {
+  margin: 0;
+  color: #101820;
+  font: 700 22px/1.2 var(--heading);
+}
+
+.subtitle {
+  color: #5a6573;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(128px, 1fr) repeat(var(--days), minmax(22px, 30px));
+  gap: 8px;
+  align-items: center;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.corner {
+  min-height: 22px;
+}
+
+.dateLabel {
+  color: #687386;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.habitName {
+  min-width: 0;
+  color: #1d2530;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.cell {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(29, 37, 48, 0.08);
+  border-radius: 6px;
+  background: #edf2f7;
+}
+
+.cell[data-type='binary'][data-completed='true'] {
+  background: #27b36a;
+}
+
+.cell[data-type='quantitative'] {
+  background: var(--cell-color);
+}
+
+.cell[data-completed='true'] {
+  border-color: rgba(39, 179, 106, 0.32);
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(112px, 1fr) repeat(var(--days), 22px);
+  }
+}
