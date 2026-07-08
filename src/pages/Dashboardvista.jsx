@@ -13,11 +13,11 @@ function Dashboardvista({ onNavigate }) {
         <HabitsCard className={styles.dsbcard} onOpenHabits={() => onNavigate('habits')} />
         <article className={styles.dsbcardTop}>
           <h2>Card de prueba top</h2>
-          <p>Si ves esta tarjeta, el grid del dashboard se esta mostrando.</p>
+          <p>Esta tarjeta es una prueba de espacio1</p>
         </article>
         <article className={styles.dsbcardBottom}>
           <h2>Card de prueba bottom</h2>
-          <p>Si ves esta tarjeta, el grid del dashboard se esta mostrando.</p>
+          <p>esta tarjeta es una prueba de espacio2</p>
         </article>
       </section>
     </main>

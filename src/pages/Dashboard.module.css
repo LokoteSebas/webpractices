@@ -3,14 +3,14 @@
   width: 100%;
   padding: 32px;
   box-sizing: border-box;
-  /* Color temporal para visualizar el contenedor main */
+  
   
 }
 
 .dsbgrid {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  /* Crea 2 columnas: la izquierda ocupa más espacio la derecha ocupa menos espacio */
+  
   grid-template-rows: 1fr 1fr; /* Crea 2 filas de la misma altura */
 
   gap: 24px;
@@ -36,10 +36,10 @@
 }
 
 .dsbcardTop {
-  /* Coloca esta tarjeta en la columna derecha */
+  
   grid-column: 2;
 
-  /* Coloca esta tarjeta en la primera fila */
+  
   grid-row: 1;
   padding: 24px;
   border-radius: 24px;
@@ -51,10 +51,10 @@
 }
 
 .dsbcardBottom {
-  /* Coloca esta tarjeta en la columna derecha */
+  
   grid-column: 2;
 
-  /* Coloca esta tarjeta en la primera fila */
+ 
   grid-row: 2;
   padding: 24px;
   border-radius: 24px;

@@ -22,7 +22,7 @@ function LoginPage({ onLogin }) {
   return (
     <main className={styles.loginPage}>
       <form className={styles.card} onSubmit={handleSubmit} noValidate>
-        <h1 className={styles.title}>Inicio de sesion</h1>
+        <h1 className={styles.title}>Inicio de sesión</h1>
 
         <label className={styles.field}>
           <span>Campo uno</span>
