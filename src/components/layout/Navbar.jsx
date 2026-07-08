@@ -5,22 +5,28 @@ const navItems = [
   { label: 'Hábitos', view: 'habits' },
 ]
 
-function Navbar({ currentView, onViewChange }) {
+function Navbar({ currentView, onLogout, onViewChange }) {
   return (
     <nav className={styles.navbar} aria-label="Principal">
-      {navItems.map((item) => (
-        <button
-          aria-current={currentView === item.view ? 'page' : undefined}
-          className={styles.navButton}
-          key={item.view}
-          onClick={() => onViewChange(item.view)}
-          type="button"
-        >
-          {item.label}
+      <div className={styles.navLinks}>
+        {navItems.map((item) => (
+          <button
+            aria-current={currentView === item.view ? 'page' : undefined}
+            className={styles.navButton}
+            key={item.view}
+            onClick={() => onViewChange(item.view)}
+            type="button"
+          >
+            {item.label}
+          </button>
+        ))}
+        <button className={styles.navButton} type="button">
+          Cuenta
         </button>
-      ))}
-      <button className={styles.navButton} type="button">
-        Cuenta
+      </div>
+
+      <button className={styles.logoutButton} onClick={onLogout} type="button">
+        cerrar sesion
       </button>
     </nav>
   )
